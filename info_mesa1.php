@@ -1486,7 +1486,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                                 $servername = "localhost"; // Puedes cambiarlo si tu base de datos está en otro servidor
                                                 $username = "root";
                                                 $password = "";
-                                                $database = "pruebar";
+                                                $database = "pruebar_demo";
 
                                                 // Crear la conexión
                                                 $tuConexion = new mysqli($servername, $username, $password, $database);

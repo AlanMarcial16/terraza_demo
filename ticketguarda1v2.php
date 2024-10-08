@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "pruebar";
+$database = "pruebar_demo";
 
 // Crear la conexión a la base de datos
 $conn = mysqli_connect($servername, $username, $password, $database);
@@ -33,7 +33,7 @@ if (mysqli_num_rows($result) > 0) {
     $json_data_with_message = json_encode($json_data_with_message, JSON_UNESCAPED_UNICODE);
 
     // Obtiene la habitación
-    $conn1 = mysqli_connect($servername, $username, $password, "pruebar");
+    $conn1 = mysqli_connect($servername, $username, $password, "pruebar_demo");
     $sql_habitacion = "SELECT habitacion, comensal FROM mesas WHERE nombre = 'Mesa 1'";
     $result_habitacion = mysqli_query($conn1, $sql_habitacion);
 
@@ -54,10 +54,10 @@ if (mysqli_num_rows($result) > 0) {
             echo "Error al insertar datos en la tabla 'tickets': " . mysqli_error($conn);
         }
 
-        // Cierra la conexión a la base de datos "pruebar"
+        // Cierra la conexión a la base de datos "pruebar_demo"
         mysqli_close($conn1);
     } else {
-        echo "No se encontró la habitación 'Mesa 1' en la tabla 'mesas' de la base de datos 'pruebar'.";
+        echo "No se encontró la habitación 'Mesa 1' en la tabla 'mesas' de la base de datos 'pruebar_demo'.";
     }
 }
 ?>

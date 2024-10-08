@@ -227,7 +227,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                       <br>
                       <?php
 // Conexión a la base de datos
-$conexion = new mysqli('localhost', 'root', '', 'pruebar');
+$conexion = new mysqli('localhost', 'root', '', 'pruebar_demo');
 
 // Verificar conexión
 if ($conexion->connect_error) {
@@ -281,7 +281,7 @@ $resultado = $conexion->query($sql);
     <?php
 
 // Conexión a la base de datos
-$conexion = new mysqli('localhost', 'root', '', 'pruebar');
+$conexion = new mysqli('localhost', 'root', '', 'pruebar_demo');
 
 // Verificar conexión
 if ($conexion->connect_error) {

@@ -3,15 +3,15 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 
-// Crear la conexión a la base de datos "pruebar"
-$conn2 = mysqli_connect($servername, $username, $password, "pruebar");
+// Crear la conexión a la base de datos "pruebar_demo"
+$conn2 = mysqli_connect($servername, $username, $password, "pruebar_demo");
 
 // Verificar la conexión
 if (!$conn2) {
-    die("La conexión a la base de datos 'pruebar' ha fallado: " . mysqli_connect_error());
+    die("La conexión a la base de datos 'pruebar_demo' ha fallado: " . mysqli_connect_error());
 }
 
-// Obtener la habitación de Mesa 2 de la base de datos "pruebar"
+// Obtener la habitación de Mesa 2 de la base de datos "pruebar_demo"
 $sql = "SELECT habitacion FROM mesas WHERE nombre = 'Mesa 2'";
 $result = mysqli_query($conn2, $sql);
 
@@ -20,7 +20,7 @@ if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
     $habitacionMesa = $row["habitacion"];
 
-    // Cerrar la conexión a la base de datos "pruebar"
+    // Cerrar la conexión a la base de datos "pruebar_demo"
     mysqli_close($conn2);
 
     // Crear una nueva conexión a la base de datos "prueba"
@@ -36,15 +36,15 @@ if (mysqli_num_rows($result) > 0) {
     $resultReservaciones = mysqli_query($conn2, $sqlReservaciones);
 
     if (mysqli_num_rows($resultReservaciones) > 0) {
-        // Crear una nueva conexión a la base de datos "pruebar"
-        $conn3 = mysqli_connect($servername, $username, $password, "pruebar");
+        // Crear una nueva conexión a la base de datos "pruebar_demo"
+        $conn3 = mysqli_connect($servername, $username, $password, "pruebar_demo");
 
         // Verificar la conexión
         if (!$conn3) {
-            die("La conexión a la base de datos 'pruebar' ha fallado: " . mysqli_connect_error());
+            die("La conexión a la base de datos 'pruebar_demo' ha fallado: " . mysqli_connect_error());
         }
 
-        // Consulta SQL para obtener la suma de 'preciou' de la tabla 'ordenmesa2' en la base de datos "pruebar"
+        // Consulta SQL para obtener la suma de 'preciou' de la tabla 'ordenmesa2' en la base de datos "pruebar_demo"
         $sqlTotal = "SELECT SUM(preciou) AS total FROM ordenmesa2";
 
         $resultTotal = mysqli_query($conn3, $sqlTotal);
@@ -79,10 +79,10 @@ if (mysqli_num_rows($result) > 0) {
                 echo "Error al actualizar 'cextras': " . mysqli_error($conn2);
             }
         } else {
-            echo "No se pudo obtener el valor de 'total' desde la tabla 'ordenmesa2' en la base de datos 'pruebar'.";
+            echo "No se pudo obtener el valor de 'total' desde la tabla 'ordenmesa2' en la base de datos 'pruebar_demo'.";
         }
 
-        // Cerrar la conexión a la base de datos "pruebar"
+        // Cerrar la conexión a la base de datos "pruebar_demo"
         mysqli_close($conn3);
     } else {
         echo "No se encontraron reservaciones para la habitación '$habitacionMesa' en la base de datos 'prueba'.";
@@ -91,6 +91,6 @@ if (mysqli_num_rows($result) > 0) {
     // Cerrar la conexión a la base de datos "prueba"
     mysqli_close($conn2);
 } else {
-    echo "No se encontró la habitación 'Mesa 2' en la tabla 'mesas' de la base de datos 'pruebar'.";
+    echo "No se encontró la habitación 'Mesa 2' en la tabla 'mesas' de la base de datos 'pruebar_demo'.";
 }
 ?>

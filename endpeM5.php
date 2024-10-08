@@ -10,8 +10,8 @@ if (!$conn) {
     die("Conexión fallida: " . mysqli_connect_error());
 }
 
-// Consulta para obtener la suma de 'preciou' en la tabla 'ordenmesa5' de la base de datos 'pruebar'
-$sqlSuma = "SELECT SUM(preciou) AS total FROM pruebar.ordenmesa5";
+// Consulta para obtener la suma de 'preciou' en la tabla 'ordenmesa5' de la base de datos 'pruebar_demo'
+$sqlSuma = "SELECT SUM(preciou) AS total FROM pruebar_demo.ordenmesa5";
 $resultSuma = mysqli_query($conn, $sqlSuma);
 
 

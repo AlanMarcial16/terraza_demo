@@ -219,7 +219,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                 $servername = "localhost";
                                 $username = "root";
                                 $password = "";
-                                $dbname = "pruebar";
+                                $dbname = "pruebar_demo";
 
                                 // Crea la conexión
                                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -454,7 +454,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                                 title: 'Mesa eliminada',
                                                 icon: 'success'
                                                 });
-                                                window.location.href = '/pruebar/eliminar_tarjeta.php?id=<?php echo $row['id'] ?>'
+                                                window.location.href = '/pruebar_demo/eliminar_tarjeta.php?id=<?php echo $row['id'] ?>'
                                             } else {
                                                 // Si el usuario hizo clic en el botón "Cancelar" o en cualquier otra
                                                 // parte del modal, no hacer nada.

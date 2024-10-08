@@ -1,6 +1,6 @@
 <?php
 // Establecer conexión a la base de datos
-$conn = mysqli_connect("localhost", "root", "", "pruebar");
+$conn = mysqli_connect("localhost", "root", "", "pruebar_demo");
 
 // Verificar si se recibió el ID de la tarjeta
 if (isset($_GET['id'])) {

@@ -225,7 +225,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     $servername = "localhost";
                     $username = "root";
                     $password = "";
-                    $dbname = "pruebar";
+                    $dbname = "pruebar_demo";
 
                     // Crea la conexión
                     $conn = new mysqli($servername, $username, $password, $dbname);

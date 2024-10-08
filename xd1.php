@@ -1,8 +1,8 @@
 <?php
-$servername1 = "localhost";  // Datos de la base de datos "pruebar" (tabla "tickets")
+$servername1 = "localhost";  // Datos de la base de datos "pruebar_demo" (tabla "tickets")
 $username1 = "root";
 $password1 = "";
-$database1 = "pruebar";
+$database1 = "pruebar_demo";
 
 $servername2 = "localhost";  // Datos de la base de datos "prueba" (tabla "reservaciones")
 $username2 = "root";
