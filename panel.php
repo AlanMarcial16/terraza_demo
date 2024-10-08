@@ -199,7 +199,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </head>
     <body>
             <div class="header">
-                <a href="panel.php" class="logo">Bienvenido, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</a>
+                <a href="panel.php" class="logo"><?php echo htmlspecialchars($_SESSION["username"]); ?> - Demo</a>
                     <div class="header-right">
                     <span id="fecha" class="ml-auto"></span>
                     <script>
@@ -242,6 +242,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 
                     </div>
+                    <span style="font-size: 3vw; font-weight: bold; color: red; display: block; text-align: center; margin-top: 10px;">
+            CAPACITACIÓN
+        </span>
             </div>
             
             <div class="container">
