@@ -1,0 +1,36 @@
+#mesas-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .mesa {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .libre {
+    background-color: green;
+    color: white;
+  }
+  
+  .reservada {
+    background-color: yellow;
+  }
+  
+  .ocupada {
+    background-color: red;
+    color: white;
+  }
+  
+  .atendida {
+    background-color: blue;
+    color: white;
+  }

@@ -1,0 +1,51 @@
+.sidebar {
+    width: 200px;
+    height: 100%;
+    background-color: #f1f1f1;
+    position: absolute;
+    top: 80px;
+    right: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #ddd;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+
+main {
+    margin-top: 160px; /* 80px para el encabezado + 80px para el margen superior del contenido */
+    margin-bottom: 80px;
+}
